@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MNNJ Exterior Property Care</title>
+  <!-- TODO: final meta description once services and service area are confirmed -->
+  <meta name="description" content="MNNJ Exterior Property Care — exterior cleaning, gutters and roofline, windows and conservatories, and garden maintenance.">
+  <meta name="theme-color" content="#050505">
+
+  <script>document.documentElement.classList.add("js");</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400..600&display=swap">
+
+  <link rel="preload" as="image" href="assets/images/hero/hero-property-2560.webp" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="dist/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Reusable inline icons (referenced with <use href="#i-…">) -->
+  <svg width="0" height="0" class="absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 16 16"><path d="M2 8h12M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.75"/></symbol>
+      <symbol id="i-clean" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></g></symbol>
+      <symbol id="i-roof" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M2 11h20v2.5H2z"/><path d="M19 13.5V21"/><path d="M6 13.5V20h9"/></g></symbol>
+      <symbol id="i-window" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/></g></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-14 15-15-1 10-7 15-15 15z"/><path d="M5 19l8-8"/></g></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 6 9 7 9-7"/></g></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></g></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+      <symbol id="i-drag" viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ================================================================
+       HEADER / NAVIGATION
+       ================================================================ -->
+  <header class="site-header" data-header>
+    <div class="container-site flex h-full items-center justify-between gap-6">
+      <!-- Original logo file, cropped via viewBox; black background masked out at display time.
+           Three copies of the same image, each clipped to one band (roof / wordmark / tagline),
+           stagger in once on load. The artwork is not redrawn or altered. -->
+      <a href="#top" class="logo-mark logo-anim w-28 sm:w-32 lg:w-[9.5rem]" aria-label="MNNJ Exterior Property Care — home">
+        <span aria-hidden="true">
+        <span class="logo-layer logo-roof">
+          <svg viewBox="50 580 637 320" focusable="false">
+            <defs>
+              <mask id="logo-mask-header" maskUnits="userSpaceOnUse" x="0" y="0" width="737" height="1600">
+                <image href="assets/brand/mnnj-logo-original.jpeg" width="737" height="1600"/>
+              </mask>
+            </defs>
+            <image href="assets/brand/mnnj-logo-original.jpeg" width="737" height="1600" mask="url(#logo-mask-header)"/>
+          </svg>
+        </span>
+        <span class="logo-layer logo-word">
+          <svg viewBox="50 580 637 320" focusable="false">
+            <image href="assets/brand/mnnj-logo-original.jpeg" width="737" height="1600" mask="url(#logo-mask-header)"/>
+          </svg>
+        </span>
+        <span class="logo-layer logo-tag">
+          <svg viewBox="50 580 637 320" focusable="false">
+            <image href="assets/brand/mnnj-logo-original.jpeg" width="737" height="1600" mask="url(#logo-mask-header)"/>
+          </svg>
+        </span>
+        </span>
+      </a>
+
+      <nav class="hidden lg:block" aria-label="Main" data-nav>
+        <ul class="flex items-center gap-9">
+          <li><a class="nav-link" href="#top">Home</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#results">Our Work</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a class="btn btn-primary hidden sm:inline-flex" href="#contact">Get a Quote <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <button class="menu-toggle lg:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-menu-toggle>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu (full-screen) -->
+  <div class="mobile-menu lg:hidden" id="mobile-menu">
+    <nav class="container-site flex flex-1 flex-col justify-between overflow-y-auto pb-10 pt-6" aria-label="Mobile">
+      <ul>
+        <li><a class="mobile-menu-link" href="#top">Home</a></li>
+        <li><a class="mobile-menu-link" href="#services">Services</a></li>
+        <li><a class="mobile-menu-link" href="#results">Our Work</a></li>
+        <li><a class="mobile-menu-link" href="#about">About</a></li>
+        <li><a class="mobile-menu-link" href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary btn-lg mt-10 w-full" href="#contact">Get a Quote</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- ================================================================
+         HERO
+         Illustrative image (not an MNNJ project). Decorative: alt="" and the
+         wrapper is aria-hidden. Crop is tuned per breakpoint in .hero-img.
+         ================================================================ -->
+    <section id="top" class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" data-parallax aria-hidden="true">
+        <div class="hero-media-inner">
+          <img src="assets/images/hero/hero-property-2560.webp" alt="" width="2560" height="850"
+               fetchpriority="high" decoding="async" class="hero-img size-full object-cover">
+        </div>
+      </div>
+      <div class="hero-light" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="container-site">
+        <div class="hero-copy flex max-w-2xl flex-col gap-6">
+          <p class="eyebrow hero-seq" style="--d:350ms">Exterior Property Care</p>
+          <!-- Tagline taken from the supplied logo -->
+          <h1 id="hero-title" class="hero-title">
+            <span class="hero-line"><span class="hero-seq" style="--d:450ms">Clean.</span></span>
+            <span class="hero-line"><span class="hero-seq text-silver/70" style="--d:560ms">Protect.</span></span>
+            <span class="hero-line"><span class="hero-seq text-accent" style="--d:670ms">Maintain.</span></span>
+          </h1>
+          <p class="lead hero-seq max-w-md" style="--d:850ms">
+            Professional exterior cleaning and maintenance, from driveways and gutters to windows and gardens.
+          </p>
+          <div class="hero-seq flex flex-col gap-3 sm:flex-row sm:gap-4" style="--d:1000ms">
+            <a class="btn btn-primary btn-lg" href="#contact">
+              Get a Quote
+              <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn-outline btn-lg" href="#services">Our Services</a>
+          </div>
+          <ul class="hero-features hero-seq" style="--d:1150ms" aria-label="Services at a glance">
+            <li><svg aria-hidden="true"><use href="#i-clean"/></svg><span><strong>Driveways</strong>&amp; patios</span></li>
+            <li><svg aria-hidden="true"><use href="#i-roof"/></svg><span><strong>Gutters</strong>&amp; roofline</span></li>
+            <li><svg aria-hidden="true"><use href="#i-window"/></svg><span><strong>Windows</strong>&amp; gardens</span></li>
+          </ul>
+        </div>
+
+        <a class="scroll-cue hero-seq" style="--d:1500ms" href="#services">
+          <span class="scroll-cue-mouse" aria-hidden="true"><span></span></span>
+          <span>Scroll<br>to explore</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SERVICES — four cards in a row on desktop.
+         Card images are illustrative (not MNNJ projects).
+         ================================================================ -->
+    <section id="services" class="section-tight" aria-labelledby="services-title">
+      <div class="container-site">
+        <h2 id="services-title" class="sr-only">Our services</h2>
+        <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4 xl:gap-5">
+          <!-- 01 Exterior Cleaning -->
+          <article id="service-exterior" class="svc-card service-card svc-clean" data-reveal aria-labelledby="svc-1">
+            <div class="media">
+              <img src="assets/images/services/service-exterior-cleaning-1200.webp" alt="Pressure washer cleaning stone paving" width="1200" height="960" loading="lazy" decoding="async">
+            </div>
+            <div class="svc-body">
+              <div>
+                <h3 id="svc-1" class="svc-title">Exterior Cleaning</h3>
+                <p class="svc-text">Driveways, patios and paths.</p>
+              </div>
+              <a class="svc-go" href="#contact" data-service="exterior-cleaning" aria-label="Request a quote for exterior cleaning">
+                <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 02 Gutters & Roofline -->
+          <article id="service-gutters" class="svc-card service-card svc-gutter" data-reveal style="--reveal-delay:90" aria-labelledby="svc-2">
+            <div class="media">
+              <img src="assets/images/services/service-gutters-roofline-1200.webp" alt="Vacuum hose clearing moss from a roof gutter" width="1200" height="960" loading="lazy" decoding="async">
+              <span class="fx fx-gutter" aria-hidden="true"></span>
+            </div>
+            <div class="svc-body">
+              <div>
+                <h3 id="svc-2" class="svc-title">Gutters &amp; Roofline</h3>
+                <p class="svc-text">Gutter maintenance and clearing.</p>
+              </div>
+              <a class="svc-go" href="#contact" data-service="gutters-roofline" aria-label="Request a quote for gutters and roofline">
+                <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 03 Windows & Conservatories -->
+          <article id="service-windows" class="svc-card service-card svc-glass" data-reveal style="--reveal-delay:180" aria-labelledby="svc-3">
+            <div class="media">
+              <img src="assets/images/services/service-windows-conservatories-1200.webp" alt="Water-fed brush cleaning conservatory glass" width="1200" height="960" loading="lazy" decoding="async">
+              <span class="fx fx-glint" aria-hidden="true"></span>
+            </div>
+            <div class="svc-body">
+              <div>
+                <h3 id="svc-3" class="svc-title">Windows &amp; Conservatories</h3>
+                <p class="svc-text">Window and conservatory cleaning.</p>
+              </div>
+              <a class="svc-go" href="#contact" data-service="windows-conservatories" aria-label="Request a quote for windows and conservatories">
+                <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 04 Garden Maintenance -->
+          <article id="service-garden" class="svc-card service-card svc-garden" data-reveal style="--reveal-delay:270" aria-labelledby="svc-4">
+            <div class="media">
+              <img src="assets/images/services/service-garden-maintenance-1200.webp" alt="Hedge trimmer shaping a garden hedge" width="1200" height="960" loading="lazy" decoding="async">
+            </div>
+            <div class="svc-body">
+              <div>
+                <h3 id="svc-4" class="svc-title">Garden Maintenance</h3>
+                <p class="svc-text">Garden care for well-kept outdoor spaces.</p>
+              </div>
+              <a class="svc-go" href="#contact" data-service="garden-maintenance" aria-label="Request a quote for garden maintenance">
+                <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <p class="mt-6 text-xs text-steel" data-reveal>
+          <span class="placeholder-text">To be confirmed by MNNJ:</span>
+          fascia and soffit cleaning, roof cleaning, hedge trimming, weeding, green waste clearance, and residential / commercial coverage.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         RESULTS / OUR WORK
+         ILLUSTRATIVE DEMONSTRATION ONLY. Both sides use the same illustrative
+         service image; the "before" side is simulated with a CSS grade
+         (.compare-simulated). It is labelled on the page as not a customer
+         result. Replace both layers with genuine MNNJ before/after photos
+         (assets/images/results/) when supplied, then remove the labels.
+         ================================================================ -->
+    <section id="results" class="section-tight surface-band" aria-labelledby="results-title">
+      <div class="container-site grid items-center gap-10 lg:grid-cols-2 xl:grid-cols-[1.2fr_1fr_0.85fr] xl:gap-12">
+        <figure data-reveal>
+          <div class="compare aspect-[4/3] sm:aspect-[16/10]" data-compare>
+            <div class="compare-layer media">
+              <img class="compare-simulated" src="assets/images/services/service-exterior-cleaning-1200.webp" alt="" width="1200" height="960" loading="lazy" decoding="async">
+            </div>
+            <div class="compare-layer compare-after media">
+              <img src="assets/images/services/service-exterior-cleaning-1200.webp" alt="" width="1200" height="960" loading="lazy" decoding="async">
+            </div>
+            <span class="compare-tag top-auto bottom-4 left-4">Before</span>
+            <span class="compare-tag top-auto right-4 bottom-4">After</span>
+            <span class="demo-badge">Illustrative demo · not a customer result</span>
+            <div class="compare-handle" aria-hidden="true">
+              <span class="compare-knob"><svg><use href="#i-drag"/></svg></span>
+            </div>
+            <input class="compare-range" type="range" min="0" max="100" value="50" step="1"
+                   aria-label="Before and after comparison (illustrative demo): move to reveal more of the before or after view" data-compare-range>
+          </div>
+          <figcaption class="mt-3 text-xs text-steel">
+            Simulated preview. Genuine MNNJ before-and-after photographs will replace it.
+          </figcaption>
+        </figure>
+
+        <div class="section-heading gap-4" data-reveal style="--reveal-delay:100">
+          <p class="eyebrow">Our Work</p>
+          <h2 id="results-title" class="display-md text-3xl sm:text-4xl">The difference, <span class="text-accent">side by side.</span></h2>
+          <p class="text-steel">Drag the slider to compare. Real project photographs will appear here as MNNJ completes and approves them.</p>
+          <div class="mt-2"><a class="btn btn-primary" href="#contact">Get a Quote <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
+
+        <ul class="outcomes lg:col-start-2 xl:col-start-auto" data-reveal style="--reveal-delay:200">
+          <li><svg aria-hidden="true"><use href="#i-clean"/></svg>Cleaner surfaces</li>
+          <li><svg aria-hidden="true"><use href="#i-roof"/></svg>Clear gutters</li>
+          <li><svg aria-hidden="true"><use href="#i-window"/></svg>Clearer glass</li>
+          <li><svg aria-hidden="true"><use href="#i-leaf"/></svg>Tidier gardens</li>
+        </ul>
+      </div>
+
+      <!-- Project gallery: GENUINE MNNJ PHOTOS ONLY. Not rendered until real
+           project photographs are supplied; move the markup out of <template>
+           and replace each placeholder with an <img> to enable it. -->
+      <template data-gallery-genuine-only>
+        <!-- Project gallery -->
+        <div class="mt-20 flex items-end justify-between gap-6" data-reveal>
+          <h3 class="display-md">Project gallery</h3>
+          <p class="hidden text-sm text-steel sm:block">Placeholders: real MNNJ project photos only</p>
+        </div>
+        <div class="gallery mt-8">
+          <figure class="media placeholder-media tone-stone col-span-2 row-span-2 rounded-sm" data-reveal>
+            <span class="placeholder-label">Project photo placeholder<small>Exterior cleaning · location TBC</small></span>
+          </figure>
+          <figure class="media placeholder-media tone-slate rounded-sm" data-reveal style="--reveal-delay:80">
+            <span class="placeholder-label">Photo placeholder</span>
+          </figure>
+          <figure class="media placeholder-media tone-glass rounded-sm" data-reveal style="--reveal-delay:160">
+            <span class="placeholder-label">Photo placeholder</span>
+          </figure>
+          <figure class="media placeholder-media tone-garden col-span-2 rounded-sm" data-reveal style="--reveal-delay:120">
+            <span class="placeholder-label">Project photo placeholder<small>Garden maintenance · location TBC</small></span>
+          </figure>
+          <figure class="media placeholder-media tone-slate rounded-sm" data-reveal>
+            <span class="placeholder-label">Photo placeholder</span>
+          </figure>
+          <figure class="media placeholder-media tone-stone rounded-sm" data-reveal style="--reveal-delay:80">
+            <span class="placeholder-label">Photo placeholder</span>
+          </figure>
+          <figure class="media placeholder-media tone-glass col-span-2 rounded-sm" data-reveal style="--reveal-delay:160">
+            <span class="placeholder-label">Project photo placeholder<small>Windows · location TBC</small></span>
+          </figure>
+        </div>
+      </template>
+    </section>
+
+    <!-- ================================================================
+         ABOUT US
+         The ONLY section where football may be mentioned (Marvin is a footballer and the owner).
+         Background image is ILLUSTRATIVE property photography, not Marvin and
+         not an MNNJ job. Replace with Marvin's approved photograph when supplied
+         (never an AI-generated person).
+         ================================================================ -->
+    <section id="about" class="about-owner" aria-labelledby="about-title">
+      <div class="container-site grid items-center gap-14 py-16 sm:py-24 lg:grid-cols-12 lg:gap-16">
+        <!-- Marvin's portrait. When his approved photo is supplied, save it as
+             assets/images/about/marvin-portrait.webp (4:5, ~1200 x 1500) and
+             uncomment the <img> below. Never use an AI-generated person.
+             Until then the frame shows the monogram card only. -->
+        <div class="lg:col-span-5" data-reveal>
+          <div class="portrait-frame mr-4 sm:mr-6">
+            <div class="owner-portrait">
+              <!-- <img src="assets/images/about/marvin-portrait.webp" alt="Marvin, footballer and owner of MNNJ Exterior Property Care" width="1200" height="1500" loading="lazy" decoding="async"> -->
+              <div class="owner-monogram" aria-hidden="true">
+                <span class="owner-monogram-letter">M</span>
+                <span class="owner-monogram-caption">Marvin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-8 lg:col-span-7" data-reveal style="--reveal-delay:120">
+          <div class="section-heading gap-4">
+            <p class="eyebrow">About MNNJ</p>
+            <h2 id="about-title" class="display-lg">Meet the <span class="text-accent">Owner.</span></h2>
+            <div class="owner-id">
+              <p class="owner-name">Marvin</p>
+              <!-- Confirmed by the business: Marvin is a footballer AND the owner.
+                   Present these side by side; never as a previous career. -->
+              <p class="owner-role">Footballer and Owner of MNNJ Exterior Property Care.</p>
+            </div>
+            <p class="text-silver/80">MNNJ Exterior Property Care provides exterior cleaning, gutter and roofline care, window and conservatory cleaning, and garden maintenance.</p>
+          </div>
+
+          <!-- Football: the ONLY place on the site where football appears.
+               Add confirmed details only (e.g. club, position) when supplied. -->
+          <div class="football-block">
+            <svg class="football-icon" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8.2l3.6 2.6-1.4 4.2H9.8l-1.4-4.2z"/><path d="M12 8.2V3.2M15.6 10.8l4.6-1.6M14.2 15l2.9 4M9.8 15l-2.9 4M8.4 10.8L3.8 9.2"/></g></svg>
+            <div>
+              <h3 class="football-title">Football</h3>
+              <p class="mt-2 text-silver/80">Alongside running MNNJ Exterior Property Care, Marvin is a footballer.</p>
+            </div>
+          </div>
+
+          <div><a class="btn btn-primary" href="#contact">Get in Touch <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
+
+        <div class="approach approach-strip lg:col-span-12" data-reveal style="--reveal-delay:150">
+          <p class="eyebrow">Our Approach</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-clean"/></svg><span><strong>Clean</strong>Exterior surfaces and glass</span></li>
+            <li><svg aria-hidden="true"><use href="#i-roof"/></svg><span><strong>Protect</strong>Gutters and roofline</span></li>
+            <li><svg aria-hidden="true"><use href="#i-leaf"/></svg><span><strong>Maintain</strong>Gardens and hedges</span></li>
+            <li><svg aria-hidden="true"><use href="#i-arrow"/></svg><span><strong>One enquiry</strong>Ask about any combination</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         GET A QUOTE / CONTACT
+         The form is NOT connected to any submission service yet. js/main.js
+         intercepts submit and tells the visitor plainly that nothing was sent.
+         ================================================================ -->
+    <section id="contact" class="contact-band section-tight" aria-labelledby="contact-title">
+      <div class="container-site grid gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-4" data-reveal>
+          <div class="section-heading gap-4">
+            <p class="eyebrow">Get in Touch</p>
+            <h2 id="contact-title" class="display-md text-3xl sm:text-4xl">Request a <span class="text-accent">Quote</span></h2>
+            <p class="text-steel">Tell us about your property and the service you're interested in.</p>
+          </div>
+          <ul class="mt-8 border-b border-charcoal-light">
+            <li class="contact-row">
+              <svg aria-hidden="true"><use href="#i-phone"/></svg>
+              <div><p class="field-label mb-1">Phone</p><p><span class="placeholder-text">To be confirmed</span></p></div>
+            </li>
+            <li class="contact-row">
+              <svg aria-hidden="true"><use href="#i-mail"/></svg>
+              <div><p class="field-label mb-1">Email</p><p><span class="placeholder-text">To be confirmed</span></p></div>
+            </li>
+            <li class="contact-row">
+              <svg aria-hidden="true"><use href="#i-pin"/></svg>
+              <div><p class="field-label mb-1">Service area</p><p><span class="placeholder-text">To be confirmed</span></p></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-8" data-reveal style="--reveal-delay:120">
+          <form class="quote-form" id="quote-form" data-quote-form aria-labelledby="contact-title" aria-describedby="form-notice">
+            <p id="form-notice" class="form-status">
+              <strong>Preview form:</strong> online submission is not connected yet, so enquiries cannot be sent from this page.
+            </p>
+
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+              <div>
+                <label class="field-label" for="q-name">Your name <span aria-hidden="true">*</span></label>
+                <input class="field" id="q-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div>
+                <label class="field-label" for="q-email">Email address <span aria-hidden="true">*</span></label>
+                <input class="field" id="q-email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div>
+                <label class="field-label" for="q-phone">Phone</label>
+                <input class="field" id="q-phone" name="phone" type="tel" autocomplete="tel">
+              </div>
+              <div>
+                <label class="field-label" for="q-postcode">Postcode</label>
+                <input class="field" id="q-postcode" name="postcode" type="text" autocomplete="postal-code">
+              </div>
+
+              <fieldset class="sm:col-span-2">
+                <legend class="field-label">Services needed</legend>
+                <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                  <label class="choice"><input type="checkbox" name="services" value="exterior-cleaning"> Exterior Cleaning</label>
+                  <label class="choice"><input type="checkbox" name="services" value="gutters-roofline"> Gutters &amp; Roofline</label>
+                  <label class="choice"><input type="checkbox" name="services" value="windows-conservatories"> Windows &amp; Conservatories</label>
+                  <label class="choice"><input type="checkbox" name="services" value="garden-maintenance"> Garden Maintenance</label>
+                </div>
+              </fieldset>
+
+              <fieldset class="sm:col-span-2">
+                <legend class="field-label">Property type</legend>
+                <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                  <label class="choice"><input type="radio" name="property" value="residential"> Residential</label>
+                  <!-- Remove if MNNJ does not confirm commercial work -->
+                  <label class="choice"><input type="radio" name="property" value="commercial"> Commercial <span class="placeholder-text text-xs">TBC</span></label>
+                </div>
+              </fieldset>
+
+              <div class="sm:col-span-2">
+                <label class="field-label" for="q-message">Your message</label>
+                <textarea class="field min-h-32" id="q-message" name="message" placeholder="e.g. size of driveway, number of windows, access notes"></textarea>
+              </div>
+
+              <label class="flex items-start gap-3 text-sm text-steel sm:col-span-2" for="q-consent">
+                <input class="mt-1 size-4 shrink-0" style="accent-color: var(--color-electric)" id="q-consent" name="consent" type="checkbox" required>
+                <span>I agree to MNNJ using these details to respond to my enquiry. <span class="placeholder-text">Privacy policy link to be added</span> <span aria-hidden="true">*</span></span>
+              </label>
+            </div>
+
+            <div class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <p class="text-xs text-steel"><span aria-hidden="true">*</span> Required</p>
+              <button class="btn btn-primary btn-lg" type="submit">
+                Send Request
+                <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+              </button>
+            </div>
+
+            <div class="mt-6" role="status" aria-live="polite" tabindex="-1" data-form-status></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="border-t border-charcoal-light pt-20 pb-10">
+    <div class="container-site">
+      <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
+        <div class="flex flex-col items-start gap-6 lg:col-span-4">
+          <a href="#top" class="logo-mark w-52" aria-label="MNNJ Exterior Property Care — back to top">
+            <svg viewBox="50 580 637 320" aria-hidden="true" focusable="false">
+              <defs>
+                <mask id="logo-mask-footer" maskUnits="userSpaceOnUse" x="0" y="0" width="737" height="1600">
+                  <image href="assets/brand/mnnj-logo-original.jpeg" width="737" height="1600"/>
+                </mask>
+              </defs>
+              <image href="assets/brand/mnnj-logo-original.jpeg" width="737" height="1600" mask="url(#logo-mask-footer)"/>
+            </svg>
+          </a>
+          <a class="btn btn-primary" href="#contact">Get a Quote</a>
+        </div>
+
+        <nav class="lg:col-span-2" aria-label="Footer">
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="flex flex-col gap-3">
+            <li><a class="footer-link" href="#services">Services</a></li>
+            <li><a class="footer-link" href="#results">Our Work</a></li>
+            <li><a class="footer-link" href="#about">About</a></li>
+            <li><a class="footer-link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="lg:col-span-3" aria-label="Services">
+          <h2 class="footer-heading">Services</h2>
+          <ul class="flex flex-col gap-3">
+            <li><a class="footer-link" href="#service-exterior">Exterior Cleaning</a></li>
+            <li><a class="footer-link" href="#service-gutters">Gutters &amp; Roofline</a></li>
+            <li><a class="footer-link" href="#service-windows">Windows &amp; Conservatories</a></li>
+            <li><a class="footer-link" href="#service-garden">Garden Maintenance</a></li>
+          </ul>
+        </nav>
+
+        <div class="lg:col-span-3">
+          <h2 class="footer-heading">Contact</h2>
+          <ul class="flex flex-col gap-3 text-sm text-steel">
+            <li>Phone: <span class="placeholder-text">TBC</span></li>
+            <li>Email: <span class="placeholder-text">TBC</span></li>
+            <li>Area: <span class="placeholder-text">TBC</span></li>
+          </ul>
+          <h2 class="footer-heading mt-8">Follow</h2>
+          <p class="text-sm text-steel"><span class="placeholder-text">Social links to be confirmed</span></p>
+        </div>
+      </div>
+
+      <div class="rule-accent mt-16"></div>
+      <div class="mt-8 flex flex-col gap-3 text-xs text-steel sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> MNNJ Exterior Property Care</p>
+        <p><span class="placeholder-text">Privacy policy</span> &nbsp;·&nbsp; <span class="placeholder-text">Company details</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================================================
+       STICKY CALL BUTTON — DISABLED
+       No confirmed business phone number has been supplied, so this stays
+       hidden. To enable it, put the CONFIRMED number in data-tel
+       (e.g. data-tel="+44 …"); js/main.js then builds the tel: link and
+       shows the button. Never enter a placeholder or guessed number.
+       ================================================================ -->
+  <a class="call-fab" data-call-button data-tel="" hidden aria-label="Call MNNJ Exterior Property Care">
+    <span class="call-fab-icon" aria-hidden="true"><svg><use href="#i-phone"/></svg></span>
+    <span class="call-fab-label" aria-hidden="true">Call Us</span>
+  </a>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design Foundation — MNNJ</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#050505">
+
+  <script>document.documentElement.classList.add("js");</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400..600&display=swap">
+
+  <link rel="stylesheet" href="dist/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <!-- Internal review page for the design foundation. Not part of the public site. -->
+  <main class="pb-24">
+    <header class="section pb-0">
+      <div class="container-site flex flex-col gap-5">
+        <p class="eyebrow">Internal · Phase 1</p>
+        <h1 class="display-lg">Design foundation</h1>
+        <p class="lead">Reusable tokens and components for the MNNJ website. <a class="text-accent underline underline-offset-4" href="index.html">View page shell →</a></p>
+      </div>
+    </header>
+
+    <!-- Logo ----------------------------------------------------------------- -->
+    <section class="section pb-0" aria-labelledby="sg-logo">
+      <div class="container-site">
+        <h2 id="sg-logo" class="display-md mb-8">Logo</h2>
+        <div class="grid gap-6 md:grid-cols-[1fr_auto]">
+          <div class="card flex items-center justify-center p-10" style="background:radial-gradient(circle at 30% 20%, #1b4a66, #050505 70%)">
+            <span class="logo-mark w-full max-w-md" role="img" aria-label="MNNJ Exterior Property Care — Clean. Protect. Maintain.">
+              <svg viewBox="50 580 637 320" aria-hidden="true" focusable="false">
+                <defs>
+                  <mask id="logo-mask-sg" maskUnits="userSpaceOnUse" x="0" y="0" width="737" height="1600">
+                    <image href="assets/brand/mnnj-logo-original.jpeg" width="737" height="1600"/>
+                  </mask>
+                </defs>
+                <image href="assets/brand/mnnj-logo-original.jpeg" width="737" height="1600" mask="url(#logo-mask-sg)"/>
+              </svg>
+            </span>
+          </div>
+          <div class="card w-40 p-3">
+            <img class="w-full" src="assets/brand/mnnj-logo-original.jpeg" alt="" width="737" height="1600">
+          </div>
+        </div>
+        <p class="mt-4 max-w-3xl text-sm text-steel">
+          Left: the original file cropped to the artwork with its black background masked out at display time
+          (shown over a test gradient). Right: the complete, unmodified original (737 × 1600 JPEG). The file itself is never edited. A vector (SVG) or high-resolution transparent PNG master is still needed for production.
+        </p>
+      </div>
+    </section>
+
+    <!-- Colour --------------------------------------------------------------- -->
+    <section class="section pb-0" aria-labelledby="sg-colour">
+      <div class="container-site">
+        <h2 id="sg-colour" class="display-md mb-8">Colour</h2>
+        <h3 class="mb-4 font-sans text-sm font-semibold text-steel">Brand (approximate, sampled from logo)</h3>
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+          <div><div class="h-28 rounded-sm border border-charcoal-light bg-ink"></div><p class="mt-3 text-sm"><strong>Black</strong> · ink<br><span class="text-steel">#050505</span></p></div>
+          <div><div class="h-28 rounded-sm bg-silver"></div><p class="mt-3 text-sm"><strong>Silver-white</strong> · silver<br><span class="text-steel">#F2F3F5</span></p></div>
+          <div><div class="h-28 rounded-sm bg-electric"></div><p class="mt-3 text-sm"><strong>Electric blue</strong> · electric<br><span class="text-steel">#168CCB</span></p></div>
+          <div><div class="h-28 rounded-sm bg-charcoal"></div><p class="mt-3 text-sm"><strong>Charcoal</strong> · charcoal<br><span class="text-steel">#252A30</span></p></div>
+        </div>
+        <h3 class="mb-4 mt-10 font-sans text-sm font-semibold text-steel">Supporting (for contrast and depth)</h3>
+        <div class="grid grid-cols-3 gap-4 md:grid-cols-6">
+          <div><div class="h-16 rounded-sm border border-charcoal-light bg-ink-soft"></div><p class="mt-2 text-xs text-steel">ink-soft<br>#0D0F12</p></div>
+          <div><div class="h-16 rounded-sm bg-charcoal-light"></div><p class="mt-2 text-xs text-steel">charcoal-light<br>#353B43</p></div>
+          <div><div class="h-16 rounded-sm bg-steel"></div><p class="mt-2 text-xs text-steel">steel<br>#9AA3AD</p></div>
+          <div><div class="h-16 rounded-sm bg-slate"></div><p class="mt-2 text-xs text-steel">slate<br>#5B636D</p></div>
+          <div><div class="h-16 rounded-sm bg-electric-deep"></div><p class="mt-2 text-xs text-steel">electric-deep<br>#0E6A9C</p></div>
+          <div><div class="h-16 rounded-sm bg-electric-glow"></div><p class="mt-2 text-xs text-steel">electric-glow<br>#4FB3E8</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography ----------------------------------------------------------- -->
+    <section class="section pb-0" aria-labelledby="sg-type">
+      <div class="container-site">
+        <h2 id="sg-type" class="display-md mb-8">Typography</h2>
+        <div class="flex flex-col gap-8 border-l border-charcoal-light pl-6">
+          <div><p class="mb-2 text-xs text-steel">.eyebrow — Archivo, expanded</p><p class="eyebrow">Section label</p></div>
+          <div><p class="mb-2 text-xs text-steel">.display-xl — hero only</p><p class="display-xl font-display">Clean. Protect. <span class="text-accent">Maintain.</span></p></div>
+          <div><p class="mb-2 text-xs text-steel">.display-lg — section titles</p><p class="display-lg font-display">What we take care of</p></div>
+          <div><p class="mb-2 text-xs text-steel">.display-md — card and sub-headings</p><p class="display-md font-display">Gutters &amp; Roofline</p></div>
+          <div><p class="mb-2 text-xs text-steel">.lead — Inter</p><p class="lead">Introductory paragraph style for section openings. Comfortable line length and muted tone keep the headings dominant.</p></div>
+          <div><p class="mb-2 text-xs text-steel">Body — Inter 16px</p><p class="max-w-2xl">Body copy for descriptions and details. Placeholder text is marked like <span class="placeholder-text">this</span> until verified content is supplied.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buttons -------------------------------------------------------------- -->
+    <section class="section pb-0" aria-labelledby="sg-buttons">
+      <div class="container-site">
+        <h2 id="sg-buttons" class="display-md mb-8">Buttons</h2>
+        <div class="flex flex-wrap items-center gap-4">
+          <a class="btn btn-primary btn-lg" href="#sg-buttons">Get a Quote
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg>
+          </a>
+          <a class="btn btn-primary" href="#sg-buttons">Primary</a>
+          <a class="btn btn-outline" href="#sg-buttons">Outline</a>
+          <a class="btn btn-ghost" href="#sg-buttons">Ghost link
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg>
+          </a>
+        </div>
+        <div class="surface-light mt-8 flex flex-wrap items-center gap-4 rounded-sm p-8">
+          <a class="btn btn-primary" href="#sg-buttons">Primary on light</a>
+          <a class="btn btn-outline" href="#sg-buttons">Outline on light</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section heading ------------------------------------------------------ -->
+    <section class="section pb-0" aria-labelledby="sg-headings">
+      <div class="container-site">
+        <h2 id="sg-headings" class="display-md mb-8">Section heading block</h2>
+        <div class="grid gap-6 lg:grid-cols-2">
+          <div class="card p-8">
+            <div class="section-heading">
+              <p class="eyebrow">Services</p>
+              <p class="display-lg font-display">Left aligned</p>
+              <p class="lead">Default layout for most sections.</p>
+            </div>
+          </div>
+          <div class="surface-light rounded-sm p-8">
+            <div class="section-heading is-centered">
+              <p class="eyebrow">About Us</p>
+              <p class="display-lg font-display text-ink">Centred, light</p>
+              <p class="lead">Light surface variant.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Placeholders & cards ------------------------------------------------- -->
+    <section class="section pb-0" aria-labelledby="sg-placeholders">
+      <div class="container-site">
+        <h2 id="sg-placeholders" class="display-md mb-8">Placeholders &amp; cards</h2>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="card" data-reveal>
+            <div class="placeholder-media aspect-[4/3] border-0"><span class="placeholder-label">Photo placeholder<small>Replace with approved MNNJ photo</small></span></div>
+            <div class="p-6"><h3 class="display-md text-xl">Card title</h3><p class="mt-2 text-sm text-steel">Card body text.</p></div>
+          </article>
+          <article class="card" data-reveal style="--reveal-delay:100">
+            <div class="placeholder-media aspect-[4/3] border-0"><span class="placeholder-label">Photo placeholder</span></div>
+            <div class="p-6"><h3 class="display-md text-xl">Reveal on scroll</h3><p class="mt-2 text-sm text-steel">Staggered with --reveal-delay.</p></div>
+          </article>
+          <article class="card" data-reveal style="--reveal-delay:200">
+            <div class="placeholder-media aspect-[4/3] border-0"><span class="placeholder-label">Photo placeholder</span></div>
+            <div class="p-6"><h3 class="display-md text-xl">Reduced motion</h3><p class="mt-2 text-sm text-steel">Shown immediately when the OS requests less motion.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form fields ---------------------------------------------------------- -->
+    <section class="section pb-0" aria-labelledby="sg-forms">
+      <div class="container-site">
+        <h2 id="sg-forms" class="display-md mb-8">Form fields</h2>
+        <!-- Visual sample only — no submission handling until the form method is decided -->
+        <form class="grid max-w-3xl gap-5 sm:grid-cols-2" onsubmit="return false" aria-label="Sample form fields (not functional)">
+          <div><label class="field-label" for="sg-name">Name</label><input class="field" id="sg-name" type="text" autocomplete="name"></div>
+          <div><label class="field-label" for="sg-email">Email</label><input class="field" id="sg-email" type="email" autocomplete="email"></div>
+          <div class="sm:col-span-2">
+            <label class="field-label" for="sg-service">Service</label>
+            <select class="field" id="sg-service">
+              <option>Exterior Cleaning</option>
+              <option>Gutters &amp; Roofline</option>
+              <option>Windows &amp; Conservatories</option>
+              <option>Garden Maintenance</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2"><label class="field-label" for="sg-msg">Message</label><textarea class="field min-h-32" id="sg-msg"></textarea></div>
+          <div><button class="btn btn-primary" type="submit">Send request</button></div>
+        </form>
+      </div>
+    </section>
+
+    <div class="container-site mt-24"><div class="rule-accent"></div></div>
+  </main>
+</body>
+</html>

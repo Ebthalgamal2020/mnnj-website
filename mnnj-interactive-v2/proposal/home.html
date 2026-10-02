@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MNNJ V2 · Proposal · Homepage composition</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap">
+<style>
+  /* STATIC COMPOSITION MOCKUP for design approval. Not production code. */
+  :root {
+    --paper: #F2F3F5; --white: #FFFFFF; --ink: #050505; --charcoal: #252A30;
+    --graphite: #5B636D; --line: #D9DCE0; --electric: #168CCB;
+    --m: 56px; --g: 24px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: "Instrument Sans", system-ui, sans-serif; font-size: 18px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  a { color: inherit; text-decoration: none; }
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--g); padding: 0 var(--m); }
+  .label { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; color: var(--graphite); display: flex; align-items: center; gap: 12px; }
+  .label::before { content: ""; width: 24px; height: 1px; background: var(--electric); }
+  .label.plain::before { display: none; }
+  .btn { display: inline-flex; align-items: center; gap: 14px; height: 52px; padding: 0 24px; background: var(--ink); color: #fff; font-size: 15px; font-weight: 500; }
+  .btn i { font-style: normal; color: var(--electric); }
+  .link { display: inline-flex; gap: 10px; align-items: center; font-size: 15px; font-weight: 500; border-bottom: 1px solid var(--ink); padding-bottom: 4px; }
+
+  /* header */
+  header { height: 112px; display: flex; align-items: center; justify-content: space-between; padding: 0 var(--m); }
+  .plaque { width: 136px; background: #000; padding: 7px 9px; line-height: 0; }
+  .plaque svg { width: 100%; }
+  nav { display: flex; align-items: center; gap: 40px; font-size: 15px; }
+  nav .btn { height: 44px; padding: 0 18px; }
+
+  /* hero */
+  .hero { min-height: calc(100vh - 112px); align-items: stretch; padding-bottom: 40px; }
+  .hero-copy { grid-column: 1 / span 5; display: flex; flex-direction: column; justify-content: space-between; padding: 72px 0 8px; }
+  h1 { font-weight: 400; font-size: 128px; line-height: .9; letter-spacing: -.05em; margin: 36px 0 40px; font-stretch: 92%; }
+  .lead { font-size: 19px; line-height: 1.5; color: var(--graphite); max-width: 400px; }
+  .ctas { display: flex; align-items: center; gap: 32px; margin-top: 40px; }
+  .mini-index { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; font-size: 13px; color: var(--graphite); border-top: 1px solid var(--line); padding-top: 20px; }
+  .mini-index b { color: var(--ink); font-weight: 500; margin-right: 8px; font-variant-numeric: tabular-nums; }
+  .hero-media { grid-column: 6 / span 7; position: relative; display: flex; flex-direction: column; gap: 14px; }
+  .reveal { position: relative; flex: 1; min-height: 640px; overflow: hidden; background: #ddd; }
+  .reveal img { position: absolute; inset: 0; }
+  .reveal .before { clip-path: inset(0 0 0 56%); }
+  .cleanline { position: absolute; top: 0; bottom: 0; left: 56%; width: 2px; margin-left: -1px; background: var(--electric); }
+  .cleanline span { position: absolute; top: 50%; left: 50%; width: 56px; height: 56px; transform: translate(-50%, -50%); border-radius: 50%; background: #fff; display: grid; place-items: center; font-size: 14px; letter-spacing: .02em; box-shadow: 0 6px 24px rgb(5 5 5 / .18); }
+  .cap { display: flex; justify-content: space-between; font-size: 13px; color: var(--graphite); }
+
+  /* statement */
+  .statement { padding-block: 168px 136px; }
+  .statement p { grid-column: 3 / span 8; font-size: 44px; line-height: 1.18; letter-spacing: -.025em; }
+  .statement p span { color: var(--graphite); }
+
+  /* index */
+  .index { padding-bottom: 168px; }
+  .index-head { grid-column: 1 / -1; display: flex; justify-content: space-between; padding-bottom: 20px; }
+  .row { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 7fr 3fr 1fr; column-gap: var(--g); align-items: center; height: 136px; border-top: 1px solid var(--line); position: relative; }
+  .row:last-child { border-bottom: 1px solid var(--line); }
+  .row .n { font-size: 14px; color: var(--graphite); font-variant-numeric: tabular-nums; }
+  .row h3 { font-weight: 400; font-size: 56px; letter-spacing: -.04em; line-height: 1; }
+  .row p { font-size: 16px; color: var(--graphite); max-width: 340px; }
+  .row .arr { justify-self: end; font-size: 22px; }
+  .row.hover h3 { padding-left: 24px; }
+  .row.hover .arr { color: var(--electric); }
+  .row .thumb { position: absolute; width: 260px; height: 182px; left: 52%; top: -24px; box-shadow: 0 30px 60px -20px rgb(5 5 5 / .35); z-index: 2; }
+
+  /* chapters */
+  .ch { padding-bottom: 168px; }
+  .ch .media { position: relative; overflow: hidden; }
+  .ch .num { font-size: 14px; color: var(--graphite); font-variant-numeric: tabular-nums; }
+  .ch h2 { font-weight: 400; font-size: 72px; line-height: .95; letter-spacing: -.045em; margin: 20px 0 24px; }
+  .ch p { color: var(--graphite); max-width: 380px; }
+  .ch .link { margin-top: 32px; }
+  .ch1 .media { grid-column: 1 / span 8; height: 760px; }
+  .ch1 .txt { grid-column: 10 / span 3; align-self: end; }
+  .ch2 .txt { grid-column: 1 / span 5; align-self: start; padding-top: 24px; }
+  .ch2 .media { grid-column: 6 / span 7; height: 860px; }
+  .ch3 { padding: 0 0 168px; }
+  .ch3 .media { height: 820px; }
+  .ch3 .over { position: absolute; left: var(--m); bottom: 56px; color: #fff; }
+  .ch3 .over .num, .ch3 .over p { color: rgb(255 255 255 / .85); }
+  .ch3 .over .link { border-color: #fff; }
+  .ch3 .scrim { position: absolute; inset: 0; background: linear-gradient(20deg, rgb(5 5 5 / .55), transparent 55%); }
+  .ch4 .media { grid-column: 3 / span 8; height: 900px; }
+  .ch4 .txt { grid-column: 3 / span 8; display: grid; grid-template-columns: 1fr 1fr; gap: var(--g); margin-top: 40px; align-items: end; }
+  .ch4 h2 { margin: 12px 0 0; }
+
+  /* closing image */
+  .closing { position: relative; height: 720px; overflow: hidden; }
+  .closing p { position: absolute; left: var(--m); top: 64px; color: #fff; font-size: 44px; letter-spacing: -.03em; line-height: 1.1; max-width: 640px; }
+
+  /* enquiry */
+  .enquire { background: var(--white); padding-block: 136px 152px; }
+  .enq-l { grid-column: 1 / span 5; }
+  .enq-l h2 { font-weight: 400; font-size: 88px; line-height: .92; letter-spacing: -.05em; margin: 28px 0 32px; }
+  .facts { margin-top: 56px; border-top: 1px solid var(--line); font-size: 15px; }
+  .facts div { display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .facts dd { color: var(--graphite); }
+  .enq-r { grid-column: 7 / span 6; display: grid; gap: 36px; align-content: start; padding-top: 44px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chips span { padding: 10px 16px; border: 1px solid var(--line); font-size: 14px; }
+  .chips span.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .field { border-bottom: 1px solid #b9bfc6; padding: 0 0 14px; font-size: 15px; color: var(--graphite); display: flex; justify-content: space-between; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: var(--g); }
+  .note { font-size: 13px; color: var(--graphite); }
+
+  footer { background: var(--ink); color: #9aa3ad; padding: 72px var(--m) 48px; display: grid; align-items: start; grid-template-columns: repeat(12, 1fr); column-gap: var(--g); font-size: 14px; }
+  footer .plaque { grid-column: 1 / span 3; width: 200px; padding: 0; }
+  footer ul { list-style: none; display: grid; gap: 10px; }
+  footer .c1 { grid-column: 7 / span 2; } footer .c2 { grid-column: 9 / span 2; } footer .c3 { grid-column: 11 / span 2; }
+  footer .base { grid-column: 1 / -1; border-top: 1px solid #1f2328; margin-top: 72px; padding-top: 24px; display: flex; justify-content: space-between; font-size: 13px; }
+  footer li:first-child { color: #fff; }
+
+  @media (max-width: 760px) {
+    :root { --m: 20px; --g: 12px; }
+    body { font-size: 16px; }
+    header { height: 72px; } .plaque { width: 118px; } nav a:not(.btn) { display: none; } nav .btn { height: 40px; font-size: 14px; }
+    .grid > * { grid-column: 1 / -1 !important; }
+    .hero { min-height: 0; }
+    .hero-copy { padding: 24px 0 0; order: 2; }
+    .hero-media { order: 1; }
+    .reveal { flex: none; min-height: 0; height: 470px; }
+    h1 { font-size: 64px; margin: 24px 0; }
+    .mini-index { margin-top: 40px; }
+    .statement { padding-block: 96px; } .statement p { font-size: 28px; }
+    .index { padding-bottom: 96px; }
+    .row { grid-template-columns: 40px 1fr 24px; height: auto; padding: 22px 0; row-gap: 6px; }
+    .row h3 { font-size: 32px; } .row p { grid-column: 2; font-size: 14px; } .row .arr { grid-row: 1; grid-column: 3; } .row .thumb { display: none; } .row.hover h3 { padding-left: 0; }
+    .ch { padding-bottom: 96px; } .ch h2 { font-size: 44px; }
+    .ch1 .media, .ch2 .media, .ch4 .media { height: 440px; } .ch1 .txt, .ch2 .txt { margin-top: 24px; }
+    .ch2 .txt { order: 2; padding: 0; } .ch3 .media { height: 560px; } .ch3 .over { right: var(--m); bottom: 32px; }
+    .ch4 .txt { grid-template-columns: 1fr; }
+    .closing { height: 460px; } .closing p { font-size: 28px; top: 32px; right: var(--m); }
+    .enquire { padding-block: 88px; } .enq-l h2 { font-size: 52px; } .enq-r { padding-top: 40px; } .two { grid-template-columns: 1fr; }
+    footer { grid-template-columns: 1fr 1fr; row-gap: 32px; } footer .plaque { grid-column: 1 / -1; width: 160px; } footer .c1, footer .c2 { grid-column: auto; } footer .c3 { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <a class="plaque" href="#" aria-label="MNNJ Exterior Property Care"><svg viewBox="44 576 649 330" aria-hidden="true"><image href="../assets/brand/mnnj-logo-original.jpeg" width="737" height="1600"/></svg></a>
+  <nav><a href="#">Services</a><a href="#">Approach</a><a href="#">Enquire</a><a class="btn" href="#">Request a quote <i>→</i></a></nav>
+</header>
+
+<section class="grid hero">
+  <div class="hero-copy">
+    <div>
+      <p class="label">Exterior Property Care</p>
+      <h1>Clean.<br>Protect.<br>Maintain.</h1>
+      <p class="lead">Exterior cleaning, windows and conservatories, gutters and roofline, and garden maintenance, carried out with care.</p>
+      <div class="ctas"><a class="btn" href="#">Request a quote <i>→</i></a><a class="link" href="#">Our services</a></div>
+    </div>
+    <div class="mini-index"><span><b>01</b>Exterior cleaning</span><span><b>02</b>Windows &amp; conservatories</span><span><b>03</b>Gutters &amp; roofline</span><span><b>04</b>Garden maintenance</span></div>
+  </div>
+  <div class="hero-media">
+    <div class="reveal">
+      <img src="img/hero.jpg" alt="">
+      <img class="before" src="img/hero-before.jpg" alt="">
+      <span class="cleanline"><span>‹ ›</span></span>
+    </div>
+    <p class="cap"><span>Drag the line across the image</span><span>Illustrative demo · not a customer result</span></p>
+  </div>
+</section>
+
+<section class="grid statement">
+  <p>Four services, one standard. <span>Stone, glass, roofline and garden, looked after so the whole exterior reads the way it was designed to.</span></p>
+</section>
+
+<section class="grid index">
+  <div class="index-head"><p class="label">Services</p><p class="label plain">(04)</p></div>
+  <div class="row"><span class="n">01</span><h3>Exterior cleaning</h3><p>Driveways, patios and paths.</p><span class="arr">→</span></div>
+  <div class="row hover"><span class="n">02</span><h3>Windows &amp; conservatories</h3><p>Window and conservatory cleaning.</p><span class="arr">→</span><span class="thumb"><img src="img/glass.jpg" alt=""></span></div>
+  <div class="row"><span class="n">03</span><h3>Gutters &amp; roofline</h3><p>Gutter maintenance and clearing.</p><span class="arr">→</span></div>
+  <div class="row"><span class="n">04</span><h3>Garden maintenance</h3><p>Garden care for well-kept outdoor spaces.</p><span class="arr">→</span></div>
+</section>
+
+<section class="grid ch ch1">
+  <div class="media"><img src="img/paving.jpg" alt=""></div>
+  <div class="txt"><p class="num">01 / 04</p><h2>Exterior<br>cleaning</h2><p>Driveways, patios and paths, washed back to the stone.</p><a class="link" href="#">Enquire about exterior cleaning →</a></div>
+</section>
+
+<section class="grid ch ch2">
+  <div class="txt"><p class="num">02 / 04</p><h2>Windows &amp;<br>conservatories</h2><p>Window and conservatory cleaning, for glass that lets the light in.</p><a class="link" href="#">Enquire about windows →</a></div>
+  <div class="media"><img src="img/glass.jpg" alt=""></div>
+</section>
+
+<section class="ch ch3">
+  <div class="media"><img src="img/gutter.jpg" alt="" style="object-position:50% 40%"><span class="scrim"></span>
+    <div class="over"><p class="num">03 / 04</p><h2>Gutters &amp;<br>roofline</h2><p>Gutter maintenance and clearing.</p><a class="link" href="#">Enquire about gutters →</a></div>
+  </div>
+</section>
+
+<section class="grid ch ch4">
+  <div class="media"><img src="img/lawn.jpg" alt=""></div>
+  <div class="txt"><div><p class="num">04 / 04</p><h2>Garden<br>maintenance</h2></div><div><p>Garden care for well-kept outdoor spaces, lawns and hedges included.</p><a class="link" href="#">Enquire about garden care →</a></div></div>
+</section>
+
+<section class="closing"><img src="img/statement.jpg" alt="" style="object-position:50% 70%"><p>Clean. Protect. Maintain.</p></section>
+
+<section class="grid enquire">
+  <div class="enq-l">
+    <p class="label">Enquire</p>
+    <h2>Start with a conversation.</h2>
+    <p class="lead">Tell us about your property and the services you're interested in.</p>
+    <dl class="facts"><div><dt>Phone</dt><dd>To be confirmed</dd></div><div><dt>Email</dt><dd>To be confirmed</dd></div><div><dt>Service area</dt><dd>To be confirmed</dd></div></dl>
+  </div>
+  <div class="enq-r">
+    <div class="chips"><span class="on">Exterior cleaning</span><span>Windows &amp; conservatories</span><span class="on">Gutters &amp; roofline</span><span>Garden maintenance</span></div>
+    <div class="two"><p class="field">Name</p><p class="field">Phone</p></div>
+    <div class="two"><p class="field">Email</p><p class="field">Postcode</p></div>
+    <p class="field" style="padding-bottom:64px">About your property</p>
+    <div><a class="btn" href="#">Request a quote <i>→</i></a></div>
+    <p class="note">Preview: online submission is not connected yet.</p>
+  </div>
+</section>
+
+<footer>
+  <span class="plaque"><svg viewBox="44 576 649 330" aria-hidden="true"><image href="../assets/brand/mnnj-logo-original.jpeg" width="737" height="1600"/></svg></span>
+  <ul class="c1"><li>Services</li><li>Exterior cleaning</li><li>Windows &amp; conservatories</li><li>Gutters &amp; roofline</li><li>Garden maintenance</li></ul>
+  <ul class="c2"><li>Company</li><li>Approach</li><li>Enquire</li></ul>
+  <ul class="c3"><li>Contact</li><li>Phone: to be confirmed</li><li>Email: to be confirmed</li></ul>
+  <p class="base"><span>© 2026 MNNJ Exterior Property Care</span><span>Clean. Protect. Maintain.</span></p>
+</footer>
+</body>
+</html>
