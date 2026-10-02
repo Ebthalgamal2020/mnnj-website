@@ -1,9 +1,9 @@
 /* ==========================================================================
    MNNJ V2 · Homepage preview — "Noir & Light"
-   Tailwind v4 source. Build from mnnj-interactive-v2/:
-   ../node_modules/.bin/tailwindcss -i src/input.css -o dist/styles.css --minify
+   Tailwind v4 source. Build from the repo root:
+   npm run build:v2
    ========================================================================== */
-@import "tailwindcss";
+@import "tailwindcss" source("..");
 
 @theme {
   --color-ink: #050505;

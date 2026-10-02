@@ -1,10 +1,13 @@
 {
   "name": "mnnj-exterior-property-care",
   "version": "1.0.0",
-  "description": "MNNJ Exterior Property Care website",
+  "description": "MNNJ Exterior Property Care website (V1 and V2)",
   "scripts": {
-    "dev": "tailwindcss -i ./src/input.css -o ./dist/styles.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./dist/styles.css --minify"
+    "dev:v1": "tailwindcss -i ./v1/src/input.css -o ./v1/dist/styles.css --watch",
+    "build:v1": "tailwindcss -i ./v1/src/input.css -o ./v1/dist/styles.css --minify",
+    "dev:v2": "tailwindcss -i ./v2/src/input.css -o ./v2/dist/styles.css --watch",
+    "build:v2": "tailwindcss -i ./v2/src/input.css -o ./v2/dist/styles.css --minify",
+    "build": "npm run build:v1 && npm run build:v2"
   },
   "type": "commonjs",
   "devDependencies": {
